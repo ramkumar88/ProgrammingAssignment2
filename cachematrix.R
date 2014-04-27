@@ -8,7 +8,7 @@
 ##  origMatrix$getInverse() ## get cached inverse matrix
 
 ## method: makeCacheMatrix 
-## purpose: To create a special matrix with methods to cache and manipulate the original and inverse matrix along with method the inverse of the matrix 
+## purpose: To create a special matrix with methods to cache and manipulate the original and inverse matrix.
 ## parameters: x        - a square matrix
 ## returns:    list     - list of methods to get/set the original and inverse matrix values
 makeCacheMatrix <- function(x = matrix()) {
@@ -27,11 +27,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## method: cacheSolve 
-## purpose: To solve the inverse of the matrix defined through makeCacheMatrix once and cache it for later use
+## purpose: To solve the inverse of the matrix defined through makeCacheMatrix once and cache it for later use.
 ## parameters: x    - an instance of the makeCacheMatrix method
 ##             ...  - Additional parameters passed to solve()
 ## returns:    i    - inverse of square matrix in x if solved without any errors
-
 cacheSolve <- function(x, ...) {
     error_ind <- 0  # Error flag initialized to zero
     i <- x$getInverse()
